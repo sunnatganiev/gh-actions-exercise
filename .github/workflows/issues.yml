@@ -1,7 +1,7 @@
 name: Issues
 on: issues
 jobs:
-  Github Context:
+  Github-Context:
     runs-on: ubuntu-latest
     steps:
       - name: Github Context

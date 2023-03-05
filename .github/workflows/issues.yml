@@ -1,12 +1,8 @@
 name: Issues
-on: 
-  issues:
-    types: [open]
-  jobs:
-    Github Context:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Get Code
-          uses: actions/checkout@v3
-        - name: Github Context
-          run: echo "${{ toJSON(github) }}"
+on: issues
+jobs:
+  Github Context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github Context
+        run: echo "${{ toJSON(github.event) }}"
